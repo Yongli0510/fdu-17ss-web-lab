@@ -1,0 +1,131 @@
+p,h1,h2,h3,h4 {
+    margin:0;padding:0;
+}
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #E8EAF6;
+    min-width: 600px;
+}
+header {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    color: white;
+    background-color: #1A237E;
+}
+header h1{
+    line-height: 1.5em;
+}
+header p{
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+nav {
+    background-color: #3F51B5;
+    margin-bottom: 0.5em;
+    padding: 0;
+    padding-left: 0.7em;
+}
+nav div {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.3em;
+    margin: 0;
+}
+nav div:hover{
+    background-color: #F50057;
+    color: white;
+}
+a {
+    color: #00B0FF;
+    margin: 0;
+}
+div {
+    border-color: #C5CAE9;
+    border-style: solid;
+    margin-bottom: 0.5em;
+}
+section {
+    padding: 0.5em;
+    background-color: white;
+    margin-bottom: 0.5em;
+}
+h2,h3,h4 {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    background-color: #7986CB;
+    color: white;
+}
+#central-park {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#p1 {
+    background-color: #C5CAE9;
+    color: #7990A3;
+    border:0;outline:0;vertical-align:baseline;margin:0;padding:0;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+#p2 {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+}
+#p3 {
+    text-align: right;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+}
+#p4 img {
+    display: inline-block;
+    vertical-align: middle;
+}
+#p5,#p6{
+    color: #F5A2C1;
+    font-style: italic;
+    font-family: "Times New Roman";
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+#p9,#p10{
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+hr {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+p span{
+    color: #C5CAE9;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+footer {
+    background-color: #1A237E;
+    padding-top: 1.3em;
+    padding-left: 1em;
+    padding-bottom: 1.3em;
+}
+#p8 {
+    font-style: italic;
+    font-family: "Times New Roman";
+    color: white;
+    margin-top: 0.6em;
+}
+#p7 {
+    color: white;
+}
+#div3 {
+    padding-bottom: 1em;
+    margin-bottom: 0;
+}
