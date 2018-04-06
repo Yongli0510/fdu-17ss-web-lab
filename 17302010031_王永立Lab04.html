@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="utf-8">
+    <title>Lab 04</title>
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/Lab04.css" />
+</head>
+<body>
+    <header>
+        <h1>Share Your Travels</h1>
+        <p>let us know where you've been</p>
+    </header>
+    <main>
+        <section>
+            <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+                <fieldset>
+                    <legend>PHOTO DETAILS</legend>
+                    <table>
+                        <tbody>
+                        <tr><td colspan="2"><p>Title</p>
+                            <input type="text" name="title" value="Give your photo a descriptive name" /><br/>
+                            <p>Description</p>
+                            <textarea placeholder="Adding a rich description will help with search results"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Continent</p>
+                                <select>
+                                    <option value="people">people</option>
+                                    <option value="scenery">scenery</option>
+                                </select><br/>
+                                <p>Country</p>
+                                <select>
+                                    <option value="China">China</option>
+                                    <option value="America">America</option>
+                                </select><br/>
+                                <p>City</p>
+                                <input type="text" name="city"/><br/>
+                            </td>
+                            <td>
+                                <div class="box">
+                                    <p>Copyright?</p>
+                                    <input type="radio" name="copyright">All rights reserved<br/>
+                                    <input type="radio" name="copyright" checked>Creative Commons<br/>
+                                </div>
+                                <div class="box">
+                                    <p>Creative Commons Types</p>
+                                    <input type="checkbox">Attribution<br/>
+                                    <input type="checkbox">Noncommercial<br/>
+                                    <input type="checkbox">No Derivative Works<br/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="rectangle"> I accept the software licenses<input type="checkbox"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Rate this photo:</p>
+                                <input type="number"><br/>
+                                <p>Color Collection:</p>
+                                <input type="color"><br/>
+                            </td>
+                            <td>
+                                <div class="box">
+                                    <p>Date Taken:</p>
+                                    <input type="date"><br/>
+                                    <p>Time Taken:</p>
+                                    <input type="time"><br/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="rectangle">
+                                    <input type="submit" value="提交" class="rounded"><input type="submit" value="Clear Form" class="rounded">
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+
+</body>
+</html>
