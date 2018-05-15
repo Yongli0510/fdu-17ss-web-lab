@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width">
+    <title>Lab07</title>
+    <link href="./css/Lab07.css" rel="stylesheet" />
+    <script src="./js/Lab07.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+    <form>
+        <select id="select1" onchange="changeDiv()">
+            <option value="select one">SELECT ONE</option>
+            <option value="create table">CREATE TABLE</option>
+            <option value="add row">ADD ROW</option>
+            <option value="delete row">DELETE ROW</option>
+            <option value="delete table">DELETE TABLE</option>
+        </select>
+        <div id="div"></div>
+        <select id="select2" onchange="changeTable();changeDivAgain()">
+            <option>SELECT(default:last created)</option>
+        </select><br/>
+        <div style="display: inline-block;text-align: center"><table id="table"></table></div>
+    </form>
+
+</body>
+</html>

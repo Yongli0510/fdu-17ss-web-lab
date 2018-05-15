@@ -1,0 +1,16 @@
+*{
+    text-align: center;
+}
+select,button {
+    width: 300px;
+}
+table{
+    border: 0;
+}
+th{
+    background-color: grey;
+    color: whitesmoke;
+}
+td{
+    padding: 0 0.5em;
+}
