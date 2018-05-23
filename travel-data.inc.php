@@ -75,6 +75,5 @@
 
   $images[101] = array("id"=>101,"title" => "Seattle Scene", "description" => "View of the Space Needle and the EMP Museum", "country" => "United States", "city" => "Seattle", "user" => "Mark Taylor", "path" => "21587937686.jpg", "taken" => "September 23, 2017", "tags" => array("downtown","skyscrapper","architecture","modernism"));
 
-  $images[102] = array("id"=>102,"title" => "Millennium Park Chicago", "description" => "Jay Pritzker Pavilion at Millennium Park by Frank Gehry", "country" => "United States", "city" => "Chicago", "user" => "Mark Taylor", "path" => "22182041615.jpg", "taken" => "September 28, 2017", "tags" => array("downtown","skyscrapper","architecture","modernism")); 
-  
+  $images[102] = array("id"=>102,"title" => "Millennium Park Chicago", "description" => "Jay Pritzker Pavilion at Millennium Park by Frank Gehry", "country" => "United States", "city" => "Chicago", "user" => "Mark Taylor", "path" => "22182041615.jpg", "taken" => "September 28, 2017", "tags" => array("downtown","skyscrapper","architecture","modernism"));
 ?>
