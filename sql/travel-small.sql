@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS `Cities`;
 
 CREATE TABLE `Cities` (
   `GeoNameID` INTEGER NOT NULL, 
-  `AsciiName` VARCHAR(255), 
+  `AsciiName` VARCHAR(255),
   `CountryCodeISO` VARCHAR(2), 
   `Latitude` DOUBLE NULL, 
   `Longitude` DOUBLE NULL, 
@@ -24,7 +24,7 @@ CREATE TABLE `Cities` (
   `Elevation` INTEGER, 
   `TimeZone` VARCHAR(255), 
   INDEX (`CountryCodeISO`), 
-  INDEX (`GeoNameID`), 
+  INDEX (`GeoNameID`),
   PRIMARY KEY (`GeoNameID`)
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 

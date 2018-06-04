@@ -1,10 +1,11 @@
 <?php
 //Fill this place
-
 //****** Hint ******
 //connect database and fetch data here
-
-
+$db = new mysqli("localhost","root","","travel");
+$result = $db -> query("SELECT * FROM continents");
+$result2 = $db -> query("SELECT * FROM countries");
+$result3 = $db -> query("SELECT * FROM imagedetails");
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +47,10 @@
 
                 //****** Hint ******
                 //display the list of continents
-
-                while($row = $result->fetch_assoc()) {
+                while($row = $result -> fetch_assoc()) {
                   echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
                 }
-
+                $result -> close();
                 ?>
               </select>     
               
@@ -58,9 +58,12 @@
                 <option value="0">Select Country</option>
                 <?php 
                 //Fill this place
-
                 //****** Hint ******
-                /* display list of countries */ 
+                /* display list of countries */
+                while($row2 = $result2 -> fetch_assoc()) {
+                    echo '<option value=' . $row2['ISO'] . '>' . $row2['CountryName'] . '</option>';
+                }
+                $result2 -> close();
                 ?>
               </select>    
               <input type="text"  placeholder="Search title" class="form-control" name=title>
@@ -73,10 +76,79 @@
                                     
 
 		<ul class="caption-style-2">
-            <?php 
+            <?php
             //Fill this place
 
             //****** Hint ******
+            if(isset($_GET["continent"])&&isset($_GET["country"])){
+                $country = $_GET["country"];
+                $continent = $_GET["continent"];
+                if($continent !== "0"&&$country === "0"){
+                    while ($row3 = $result3 -> fetch_assoc()){
+                        if($row3["ContinentCode"] === $continent){
+                            echo "<li>";
+                            $href = "detail.php?id=".$row3['ImageID'];
+                            echo "<a href='$href' class='img-responsive'>";
+                            $src = "./images/square-medium/".$row3['Path'];
+                            $alt = $row3['Title'];
+                            echo "<img src='$src' alt='$alt'>";
+                            echo "<div class='caption'><div class='blur'></div><div class='caption-text'>";
+                            echo "<p>".$alt."</p></div></div></a></li>";
+                        }
+                    }
+                }
+                else if($continent === "0"&&$country !== "0"){
+                    while ($row3 = $result3 -> fetch_assoc()){
+                        if($row3["CountryCodeISO"] === $country){
+                            echo "<li>";
+                            $href = "detail.php?id=".$row3['ImageID'];
+                            echo "<a href='$href' class='img-responsive'>";
+                            $src = "./images/square-medium/".$row3['Path'];
+                            $alt = $row3['Title'];
+                            echo "<img src='$src' alt='$alt'>";
+                            echo "<div class='caption'><div class='blur'></div><div class='caption-text'>";
+                            echo "<p>".$alt."</p></div></div></a></li>";
+                        }
+                    }
+                }
+                else if($continent !== "0"&&$country !== "0") {
+                    while ($row3 = $result3->fetch_assoc()) {
+                        if ($row3["CountryCodeISO"] === $country && $row3["ContinentCode"] === $continent) {
+                            echo "<li>";
+                            $href = "detail.php?id=" . $row3['ImageID'];
+                            echo "<a href='$href' class='img-responsive'>";
+                            $src = "./images/square-medium/" . $row3['Path'];
+                            $alt = $row3['Title'];
+                            echo "<img src='$src' alt='$alt'>";
+                            echo "<div class='caption'><div class='blur'></div><div class='caption-text'>";
+                            echo "<p>" . $alt . "</p></div></div></a></li>";
+                        }
+                    }
+                }
+                else
+                    while ($row3 = $result3 -> fetch_assoc()){
+                        echo "<li>";
+                        $href = "detail.php?id=".$row3['ImageID'];
+                        echo "<a href='$href' class='img-responsive'>";
+                        $src = "./images/square-medium/".$row3['Path'];
+                        $alt = $row3['Title'];
+                        echo "<img src='$src' alt='$alt'>";
+                        echo "<div class='caption'><div class='blur'></div><div class='caption-text'>";
+                        echo "<p>".$alt."</p></div></div></a></li>";
+                    }
+
+            }
+            else
+                while ($row3 = $result3 -> fetch_assoc()){
+                echo "<li>";
+                $href = "detail.php?id=".$row3['ImageID'];
+                echo "<a href='$href' class='img-responsive'>";
+                $src = "./images/square-medium/".$row3['Path'];
+                $alt = $row3['Title'];
+                echo "<img src='$src' alt='$alt'>";
+                echo "<div class='caption'><div class='blur'></div><div class='caption-text'>";
+                echo "<p>".$alt."</p></div></div></a></li>";
+            }
             /* use while loop to display images that meet requirements ... sample below ... replace ???? with field data
             <li>
               <a href="detail.php?id=????" class="img-responsive">
@@ -89,7 +161,7 @@
                 </div>
               </a>
             </li>        
-            */ 
+            */
             ?>
        </ul>       
 
